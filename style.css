@@ -64,7 +64,7 @@ p{
     justify-content: center;
     align-items: center;
 
-    padding: 200px;
+    padding: 300px;
 }
 
 .conteudo{
@@ -175,3 +175,255 @@ p{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ÁREA DO CÍRCULO */
+.container{
+  width:420px;
+  height:420px;
+
+  position:relative;
+
+  margin:auto;
+
+  transform:translateY(-80px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CARD REDONDO */
+.card{
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  border-radius:50%;
+
+  background:rgba(4, 13, 139, 0.685);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255, 255, 255, 0.432);
+
+  padding:50px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  opacity:0;
+  transform:scale(0.8);
+
+  transition:1s;
+
+  color:white;
+  font-family:'Segoe UI', sans-serif;
+}
+
+/* CARD ATIVO */
+.card.active{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* TÍTULO */
+.card h1{
+  color: #ffffff;
+  font-size:1.8rem;
+  margin-bottom:18px;
+}
+
+/* TEXTO */
+.card p{
+  font-size:1rem;
+  line-height:1.6;
+  max-width:260px;
+}
+
+/* EMOJI */
+.emoji{
+  font-size:3.5rem;
+  margin-bottom:18px;
+
+  animation:flutuar 3s ease-in-out infinite;
+}
+
+/* DATA */
+.data{
+  margin-top:20px;
+  font-size:0.9rem;
+  opacity:0.7;
+}
+
+/* ANIMAÇÃO */
+@keyframes flutuar{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* RESPONSIVO */
+@media(max-width:500px){
+
+  .container{
+    width:320px;
+    height:320px;
+  }
+
+  .card{
+    padding:35px;
+  }
+
+  .card h1{
+    font-size:1.4rem;
+  }
+
+  .card p{
+    font-size:0.9rem;
+    max-width:220px;
+  }
+
+  .emoji{
+    font-size:3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.game-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  margin-top:50px;
+
+  color:white;
+  font-family:'Segoe UI', sans-serif;
+}
+
+.game-container h1{
+  font-size:2.2rem;
+  margin-bottom:10px;
+}
+
+.sub{
+  opacity:0.8;
+  margin-bottom:25px;
+  text-align:center;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(10, 45px);
+  gap:5px;
+}
+
+.cell{
+  width:45px;
+  height:45px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  border-radius:12px;
+
+  font-size:1.1rem;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.cell:hover{
+  transform:scale(1.08);
+  background:rgba(255,255,255,0.15);
+}
+
+.selected{
+  background:#ff4fa3;
+  color:white;
+}
+
+.found{
+  background:#7c3aed;
+  color:white;
+}
+
+.words{
+  margin-top:25px;
+
+  display:flex;
+  gap:20px;
+
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.words span{
+  padding:10px 18px;
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.08);
+}
+
+.done{
+  text-decoration:line-through;
+  opacity:0.5;
+}
+
+.message{
+  margin-top:25px;
+  font-size:1.2rem;
+  text-align:center;
+}
