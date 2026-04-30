@@ -806,8 +806,8 @@ p{
   height:160px;
 
   position:relative;
-
-  background:#640202;
+background:#470202;
+  
 
   border-radius:20px;
 
@@ -826,7 +826,8 @@ p{
   width:220px;
   height:80px;
 
-  background:#470202;
+  
+  background:#640202;
 
   position:absolute;
 
@@ -973,126 +974,7 @@ p{
 
 
 
-/* ===== RESPONSIVIDADE GERAL ===== */
 
-*{
-    box-sizing:border-box;
-}
-
-html, body{
-    width:100%;
-    overflow-x:hidden;
-    margin:0;
-    padding:0;
-}
-
-/* ===== IMAGENS ===== */
-
-img{
-    max-width:100%;
-    height:auto;
-    display:block;
-}
-
-/* ===== VÍDEOS ===== */
-
-video{
-    max-width:100%;
-    height:auto;
-}
-
-/* ===== TEXTOS ===== */
-
-h1{
-    font-size:clamp(2rem, 6vw, 5rem);
-}
-
-h2{
-    font-size:clamp(1.5rem, 5vw, 3rem);
-}
-
-p{
-    font-size:clamp(1rem, 3vw, 1.2rem);
-    line-height:1.6;
-}
-
-/* ===== CONTAINERS ===== */
-
-.container,
-.content,
-.main{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-/* ===== FLEX ===== */
-
-.flex{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-}
-
-/* ===== BOTÕES ===== */
-
-button{
-    max-width:100%;
-}
-
-/* ===== CELULAR ===== */
-
-@media (max-width:768px){
-
-    body{
-        padding:10px;
-    }
-
-    .flex{
-        flex-direction:column;
-    }
-
-    h1, h2, p{
-        text-align:center;
-    }
-
-    button{
-        width:100%;
-    }
-
-    iframe{
-        width:100% !important;
-    }
-
-    audio{
-        width:100%;
-    }
-
-    video{
-        width:100%;
-    }
-
-    .container,
-    .content,
-    .main{
-        width:100%;
-    }
-
-}
-
-/* ===== ELEMENTOS ABSOLUTOS ===== */
-
-@media (max-width:768px){
-
-    [style*="position: absolute"]{
-        max-width:100%;
-        left:auto !important;
-        right:auto !important;
-    }
-
-}
 
 
 
