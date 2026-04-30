@@ -138,3 +138,71 @@ function verificar(){
       "💖 Você encontrou tudo que eu mais gosto em você 💖";
   }
 }
+
+
+
+
+
+const items = document.querySelectorAll(".timeline-item");
+
+window.addEventListener("scroll", () => {
+
+  items.forEach(item => {
+
+    const top = item.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+
+      item.style.opacity = "1";
+      item.style.transform = "translateY(0)";
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+function abrirAlianca(){
+
+  const box = document.getElementById("ringBox");
+
+  box.classList.add("open");
+
+  setTimeout(() => {
+
+    document
+    .getElementById("pedido")
+    .classList.remove("hidden");
+
+    document
+    .getElementById("pedido")
+    .classList.add("show");
+
+  }, 800);
+}
+
+/* BOTÃO NÃO FUGINDO */
+function fugir(botao){
+
+  const x = Math.random() * 300 - 150;
+  const y = Math.random() * 200 - 100;
+
+  botao.style.transform =
+  `translate(${x}px, ${y}px)`;
+}
+
+/* RESPOSTA FINAL */
+function respostaSim(){
+
+  document.getElementById("finalText").innerHTML =
+  "💖 Eu sabia que você diria sim 💖";
+}
